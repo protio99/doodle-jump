@@ -3,6 +3,9 @@
     height: 600px;
     background-color: yellow;
     position: relative;
+    font-size: 5rem;
+    text-align: center;
+
 }
 
 .doodler{
