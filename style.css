@@ -1,7 +1,10 @@
 .grid{
     width: 400px;
     height: 600px;
-    background-color: yellow;
+    /* background-image: url("https://img.freepik.com/free-photo/graph-paper_1160-371.jpg?w=740&t=st=1675439353~exp=1675439953~hmac=f44eec40f49c772fc2ae1e54064004483152605341be04e72b6ca401419382d9"); */
+    background-image: url("./background_doodle.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
     position: relative;
     font-size: 5rem;
     text-align: center;
@@ -11,13 +14,22 @@
 .doodler{
     width: 60px;
     height: 85px;
-    background-color: red;
+    /* background-color: red; */
+    background-image: url("./doodle.png");
+    background-size: cover;
     position: absolute;
 }
 
 .platform{
     width: 85px;
-    height: 15px;
-    background-color: green;
+    height: 28px;
+    background-image: url("./platform.png");
+    background-size:cover ;
     position: absolute;
+    border-radius: 20px;
+}
+
+body{
+    display: flex;
+    justify-content: center;
 }
