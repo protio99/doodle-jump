@@ -3,6 +3,8 @@
 document.addEventListener('DOMContentLoaded', () => {
     const grid = document.querySelector('.grid')
     const doodler = document.createElement('div')
+    const startButton = document.createElement('button')
+    const h2 = document.createElement('h2')
     let doodlerLeftSpace = 50
     let startPoint = 150
     let doodlerBottomSpace = startPoint
@@ -18,6 +20,22 @@ document.addEventListener('DOMContentLoaded', () => {
     let rightTimerId
     let score = 0
 
+    function createStartButton() {
+        let tittle = "Doodle Jump"
+        let label = 'Start'
+        const p = document.createElement('p')
+        grid.appendChild(h2)
+        grid.appendChild(startButton)
+        startButton.classList.add('start-button')
+        h2.classList.add('tittle')
+        startButton.innerText = label
+        // startButton.appendChild(p)
+        h2.innerText = tittle
+        // p.innerText = label
+
+
+
+    }
     function createDoodler() {
         grid.appendChild(doodler)
         //classList.add help us to add a new class to an element
@@ -189,18 +207,20 @@ document.addEventListener('DOMContentLoaded', () => {
         clearInterval(leftTimerId)
 
     }
-
+    createStartButton()
+    startButton.addEventListener('click', start)
     function start() {
         if (!isGameOver) {
+            grid.removeChild(startButton)
+            grid.removeChild(h2)
             createPlatforms()
             createDoodler()
             setInterval(movePlatforms, 30)
             jump()
             document.addEventListener('keyup', control)
 
+
         }
     }
-    //we should attach this function to a button to make it more user friendly
-    start()
 
 })
